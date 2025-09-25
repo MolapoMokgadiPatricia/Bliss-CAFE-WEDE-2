@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" >
+</head>
+<body>
+        <header>
+             <!--Navigation Section-->
+            <img src="/assets/Your paragraph text (1).png" alt="Bliss Cafe Logo" width="150" height="auto">
+            <!--Hamburger icon-->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="navbar" id="navbar">
+                <a href="../index.html">Home</a>
+                <a href="./gallery.html">Our Gallery</a>
+                <a href = "./menu.html">Our Menu</a>
+                <a href="./about.html">About Us</a>
+                <a href="./contact.html">Contact Us</a>
+            </nav>
+         
+        </header>
+        <main>
+            <section class="contact-details">
+                <h1>Our Details</h1>
+                <table>
+                <tr>
+                    <td width="150">Cell-Phone:</td>
+                    <td>(071)-088-4565</td>
+                </tr>
+                <tr>
+                    <td width="150">Address:</td>
+                    <td>54 Kerk St, Polokwane, 0700</td>
+                </tr>
+                <tr>
+                    <td width="150">Email Address:</td>
+                    <td><a href="mailto:blisscafe@gmail.com">blisscafe@gmail.com</a></td>
+                </tr>
+                </table>
+            </section>
+
+            <section class="enquiry-form">
+                <h1>Enquiry Form:</h1>
+                <form action="" method="post">
+                <table>
+                    <tr>
+                    <td><label for="name">Name</label></td>
+                    <td><input type="text" id="name" name="name" placeholder="Enter Your Name" required></td>
+                    </tr>
+                    <tr>
+                    <td><label for="email">Email</label></td>
+                    <td><input type="email" id="email" name="email" placeholder="Enter email" required></td>
+                    </tr>
+                    <tr>
+                    <td><label for="message">Message</label></td>
+                    <td><textarea id="message" name="message" rows="5" cols="25" placeholder="Enter Your Message" required></textarea></td>
+                    </tr>
+                    <tr>
+                    <td></td>
+                    <td><input type="submit" name="submit" value="Submit"></td>
+                    </tr>
+                </table>
+                </form>
+            </section>
+        </main>
+           <!--Google Maps-->
+            <section class="map-section">
+            <h1>Our Location</h1>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.3979616828283!2d29.447712676025485!3d-23.910958074530175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec6d827a6d3019f%3A0xac207bf46b6745c8!2sRosebank%20College%20Polokwane%20Campus!5e0!3m2!1sen!2sza!4v1758618857376!5m2!1sen!2sza" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                </div>
+            </section>
+            <!-- Business Hours Section -->
+            <section class="business-hours">
+                <h1>Business Hours</h1>
+                <table>
+                    <tr>
+                        <td>Monday - Friday:</td>
+                        <td>07:00 AM – 06:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday:</td>
+                        <td>08:00 AM – 04:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday:</td>
+                        <td>08:00 AM – 02:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Public Holidays:</td>
+                        <td>09:00 AM – 01:00 PM</td>
+                    </tr>
+                </table>
+            </section>
+            </main>
+            <!--Footer section-->
+            <footer>
+            <h3>Follow Us</h3>
+            <div class="social-media-links">
+                <a href="https://www.facebook.com/share/1758TGBusH/" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/mokgadi_mckay?igsh=MWhpM3poYm5rZXV4eg==" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@mokgadimolapo_?_t=ZS-8zAOnRZLRcD&_r=1" target="_blank" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        <p>&copy; 2024 Bliss Café. All Rights Reserved</p>
+    </footer>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navbar = document.getElementById('navbar');
+
+        hamburger.addEventListener('click', () => {
+            navbar.classList.toggle('show');
+            hamburger.classList.toggle('open');
+        });
+    </script>
+
+</body>
+</html>

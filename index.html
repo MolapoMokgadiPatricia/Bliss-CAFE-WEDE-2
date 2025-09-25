@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bliss Cafe</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+
+</head>
+
+<body>
+    <header>
+        <!-- Logo on the Right -->
+        <img src="/assets/Your paragraph text (1).png" alt="Bliss Cafe Logo" width="150" height="auto">
+        <!--Hamburger icon-->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar" id="navbar">
+            <a href="index.html">Home</a>
+            <a href="./pages/gallery.html">Our Gallery</a>
+            <a href="./pages/menu.html">Our Menu</a>
+            <a href="./pages/about.html">About Us</a>
+            <a href="./pages/contact.html">Contact Us</a>
+        </nav>
+         
+    </header>
+   
+    <!-- Main Content Section -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+            <h1>Welcome to Bliss Cafe</h1>
+            <p>Your cozy spot for the finest coffee & treats</p>
+            <a href="./pages/menu.html" class="btn">View Our Menu</a>
+            </div>
+        </section>
+        
+        <!--Promo banner-->
+        <section class="promo-banner">
+        <div class="content">
+            <h1>Exclusive Coffee Deal!</h1>
+            <p>Use the promo code below for 20% off, FOR FIRST TIME CUSTOMERS:</p>
+            <div class="promo-code">
+                <span>COFFEEBREAK20</span>
+            </div>
+        </div>        
+        </section>
+
+        <!--About Intro-->
+        <section class="about-intro">
+            <h2>About Bliss Cafe</h2>
+            <p>At Bliss Cafe, we blend passion with quality to serve you the best coffee experience. Whether you want to relax or catch up with friends, our warm and inviting atmosphere has you covered.</p>
+        </section>
+
+        <!--Testimonials-->
+        <section class="testimonials">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-cards">
+            <blockquote class="testimonial">
+                <p>"The best coffee I've ever had! Cozy vibe and friendly staff."</p>
+                <footer>- Mahlogonolo B.</footer>
+            </blockquote>
+            <blockquote class="testimonial">
+                <p>"A perfect place to unwind with a delicious latte and some pastries."</p>
+                <footer>- Lebokgang C.</footer>
+            </blockquote>
+            <blockquote class="testimonial">
+                <p>"Great food and drinks. I love the smoothies and the warm welcome!"</p>
+                <footer>- Tendo M.</footer>
+            </blockquote>
+            </div>
+        </section>
+</main>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="social-media-links">
+            <a href="https://www.facebook.com/share/1758TGBusH/" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/mokgadi_mckay?igsh=MWhpM3poYm5rZXV4eg==" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@mokgadimolapo_?_t=ZS-8zAOnRZLRcD&_r=1" target="_blank" aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
+
+        <p>&copy; 2024 Bliss Café. All Rights Reserved</p>
+    </footer>
+    <script>
+  const hamburger = document.getElementById('hamburger');
+  const navbar = document.getElementById('navbar');
+
+  hamburger.addEventListener('click', () => {
+    navbar.classList.toggle('show');
+    hamburger.classList.toggle('open');
+  });
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> About Us</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+
+</head>
+
+<body>
+    <header>
+
+        <!--Navigation Section-->
+        <img src="/assets/Your paragraph text (1).png" alt="Bliss Cafe Logo" width="150" height="auto">
+        <!--Hamburger icon-->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="navbar" id="navbar">
+            <a href="../index.html">Home</a>
+            <a href="./gallery.html">Our Gallery</a>
+            <a href="./menu.html">Our Menu</a>
+            <a href="./about.html">About Us</a>
+            <a href="./contact.html">Contact Us</a>
+        </nav>
+        
+    </header>
+
+    <!--About Us Section-->
+    <main>
+        <section class="about-section">
+            <h1>About Us</h1>
+            <!-- CEO Section -->
+            <section class="ceo-section">
+                <figure class="staff-ceo">
+                    <img src="/assets/2abe92e4-0d03-4c85-b92e-6153ebd392c2.jpg" alt="Founder, Mrs M Molapo" class="team-image">
+                    <figcaption>
+                        Mrs M Molapo <br>
+                        <span class="position">CEO Of Bliss Cafe</span>
+                    </figcaption>
+                </figure>
+            </section>
+            
+            <!-- Our Story Section -->
+            <section class="story-section">
+                <h3>Our Story</h3>
+                <p>
+                    Bliss Café was born from a simple yet heartfelt dream to create a space that felt like home. 
+                    What started as a small idea quickly blossomed into a vision: a cozy, welcoming café where people could 
+                    escape the rush of daily life, slow down, and enjoy the beauty of the present moment. 
+                    Inspired by the belief that joy is found in simplicity a warm drink, a meaningful conversation, a quiet moment alone.
+                    <br><br>
+                    Bliss Café was thoughtfully designed to offer more than just coffee and food. 
+                    It became a space for connection, creativity, and community. 
+                    From its humble beginnings, the café has grown, but its heart remains the same: to serve with warmth, intention, and love.
+                </p>
+            </section>
+
+            <!-- Our Mission Section -->
+            <section class="mission-section">
+                <h3>Our Mission</h3>
+                <p>
+                    At Bliss Café, our mission is to cultivate a space that nurtures both body and soul. We strive to offer thoughtfully crafted food and drinks made with fresh, wholesome ingredients, served in an environment that encourages pause, presence, and peace. 
+                    <br><br>
+                    More than just a café, we are a community hub, a place where people feel seen, heard, and valued. 
+                    Every cup, every smile, and every moment shared at Bliss is part of our deeper purpose: to inspire mindfulness, spark joy, and remind people to find beauty in the little things.
+                </p>
+            </section>
+
+            <!-- Meet Our Team Section -->
+             <section class="team-section">
+                <h2>Meet Our Team</h2>
+                <div class="team-members">
+                    <figure class="team-member">
+                        <img src="/assets/fd814245-6d73-478d-a7d5-28bf49968483.jpg" alt="Cafe Supervisor Mrs M Majola" class="team-image">
+                        <figcaption>Mrs M Majola<br><span class="position">Cafe Supervisor</span></figcaption>
+                    </figure>
+
+                    <figure class="team-member">
+                        <img src="/assets/a8ccdb91-6375-48b3-adb6-523b08ddb36b.jpg" alt="Barista Mr F Van De Merwe" class="team-image">
+                        <figcaption>Mr F Van De Merwe<br><span class="position">Head Barista</span></figcaption>
+                    </figure>
+
+                    <figure class="team-member">
+                        <img src="/assets/0809c12f-800c-4d7e-b544-b840d6a456cf.jpg" alt="Customer Service Miss L Fourie" class="team-image">
+                        <figcaption>Miss L Fourie<br><span class="position">Customer Service</span></figcaption>
+                    </figure>
+                </div>
+            </section>
+         </main>
+    <!-- Footer Section -->
+    <footer>
+        <h3>Follow Us</h3>
+        <div class="social-media-links">
+            <a href="https://www.facebook.com/share/1758TGBusH/" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/mokgadi_mckay?igsh=MWhpM3poYm5rZXV4eg==" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@mokgadimolapo_?_t=ZS-8zAOnRZLRcD&_r=1" target="_blank" aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
+        <p>&copy; 2024 Bliss Café. All Rights Reserved</p>
+    </footer>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navbar = document.getElementById('navbar');
+
+        hamburger.addEventListener('click', () => {
+            navbar.classList.toggle('show');
+            hamburger.classList.toggle('open');
+        });
+    </script>
+
+</body>
+
+</html>
