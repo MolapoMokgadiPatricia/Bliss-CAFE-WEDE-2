@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Table - Bliss Café</title>
+  <meta name="description" content="Book a table at Bliss Café for a perfect dining experience." />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" />
+</head>
+
+<body>
+  <header>
+    <img src="/assets/LOGO.png" alt="Bliss Cafe Logo" width="150" height="auto">
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="navbar" id="navbar">
+      <a href="../index.html">Home</a>
+      <a href="./gallery.html">Our Gallery</a>
+      <a href="./menu.html">Our Menu</a>
+      <a href="./about.html">About Us</a>
+      <a href="./contact.html">Contact Us</a>
+      <a href="./booking.html" class="active">Book a Table</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="booking-section">
+      <h1>Reserve Your Table</h1>
+      <p>Fill out the form below to book a table at Bliss Café. We can't wait to serve you!</p>
+
+      <form id="bookingForm" action="#" method="post" novalidate>
+        <table>
+          <tr>
+            <td><label for="name">Full Name</label></td>
+            <td><input type="text" id="name" name="name" placeholder="Enter Your Full Name" required></td>
+          </tr>
+          <tr>
+            <td><label for="phone">Phone Number</label></td>
+            <td><input type="tel" id="phone" name="phone" placeholder="Enter Your Phone Number" required></td>
+          </tr>
+          <tr>
+            <td><label for="email">Email Address</label></td>
+            <td><input type="email" id="email" name="email" placeholder="Enter Your Email Address" required></td>
+          </tr>
+          <tr>
+            <td><label for="date">Reservation Date</label></td>
+            <td><input type="date" id="date" name="date" required></td>
+          </tr>
+          <tr>
+            <td><label for="time">Reservation Time</label></td>
+            <td><input type="time" id="time" name="time" required></td>
+          </tr>
+          <tr>
+            <td><label for="people">Number of People</label></td>
+            <td><input type="number" id="people" name="people" min="1" max="20" required></td>
+          </tr>
+          <tr>
+            <td><label for="special-requests">Special Requests</label></td>
+            <td><textarea id="special-requests" name="special-requests" rows="4" placeholder="Enter any special requests or dietary preferences"></textarea></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input type="submit" value="Reserve Table"></td>
+          </tr>
+        </table>
+    </form>
+      <p id="formResponse" style="text-align:center; margin-top:10px;"></p>
+      <p id="timestampMessage" style="text-align:center; margin-top:10px; font-style: italic;"></p>
+    </section>
+  </main>
+
+  <footer>
+    <h3>Follow Us</h3>
+    <div class="social-media-links">
+      <a href="https://www.facebook.com/share/1758TGBusH/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/mokgadi_mckay" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@mokgadimolapo_" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+    <!-- Timestamp line -->
+    <p id="timestamp-message">Brewed fresh at: <span id="timestamp"></span></p>
+    <p>&copy; <span id="current-year"></span> Bliss Café. All Rights Reserved</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+       // Hamburger
+        const hamburger = document.getElementById('hamburger');
+      const navbar = document.getElementById('navbar');
+      if (hamburger && navbar) {
+        hamburger.addEventListener('click', () => {
+          navbar.classList.toggle('show');
+          hamburger.classList.toggle('open');
+        });
+      }
+    // Handle the form submission
+    const bookingForm = document.getElementById('bookingForm');
+    const formResponse = document.getElementById('formResponse');
+    const timestampMessage = document.getElementById('timestampMessage');
+
+    if (bookingForm) {
+      bookingForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        // clear previous message
+        formResponse.textContent = '';
+
+        const name = (document.getElementById('name') || {}).value || '';
+        const phone = (document.getElementById('phone') || {}).value || '';
+        const email = (document.getElementById('email') || {}).value || '';
+        const date = (document.getElementById('date') || {}).value || '';
+        const time = (document.getElementById('time') || {}).value || '';
+        const people = (document.getElementById('people') || {}).value || '';
+        const specialRequests = (document.getElementById('special-requests') || {}).value || '';
+
+        // basic validation
+        if (!name.trim() || !phone.trim() || !email.trim() || !date || !time || !people) {
+          formResponse.style.color = 'red';
+          formResponse.textContent = 'Please fill out all required fields.';
+          return;
+        }
+
+        // rudimentary email check
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!re.test(email.trim())) {
+          formResponse.style.color = 'red';
+          formResponse.textContent = 'Please enter a valid email address.';
+          return;
+        }
+
+        // simulate a successful submission
+        formResponse.style.color = '#5a3e2b';
+        formResponse.textContent = `Thank you, ${name.trim()}! Your table has been reserved for ${people} people on ${date} at ${time}.`;
+
+        // Show the timestamp message
+        const now = new Date();
+        const timestamp = now.toLocaleString();
+        timestampMessage.textContent = `Reservation made on: ${timestamp}`;
+
+        bookingForm.reset();
+      });
+    }// Timestamp update
+      function updateTimestamp() {
+        const now = new Date();
+        document.getElementById("timestamp").textContent = now.toLocaleString();
+      }
+      setInterval(updateTimestamp, 1000);
+      updateTimestamp();
+    // Automatically set the current year in footer
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
