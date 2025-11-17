@@ -550,6 +550,25 @@ header {
     font-size: 2rem;
     margin: 40px 0 20px;
 }
+.dark body {
+  background: #1a1a1a;
+  color: #f1e9d2;
+}
+
+h1, h2 {
+  font-weight: 700;
+  color: #5a402b;
+}
+
+.dark h1, .dark h2 {
+  color: #e7d7b8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
 
 /* About Us Page Styling  */
 
