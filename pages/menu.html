@@ -1,45 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bliss Cafe Menu</title>
-  <meta name="description" content="Menu — Bliss Café hot & cold beverages, smoothies, breakfast and desserts." />
-  <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bliss Café Menu</title>
+
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
-  <header>
-    <!--NAVIGATION SECTION-->
-    <img src="/assets/LOGO.png" alt="Bliss Cafe Logo" width="150" height="auto">
-    <!--Hamburger icon-->
+<header>
+    <!-- Logo -->
+    <img src="/assets/LOGO.png" alt="Bliss Cafe Logo" width="150">
+
+    <!-- Hamburger -->
     <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+        <span></span><span></span><span></span>
     </div>
 
+    <!-- NAVIGATION -->
     <nav class="navbar" id="navbar">
-      <a href="../index.html">Home</a>
-      <a href="./gallery.html">Our Gallery</a>
-      <a href="./menu.html">Our Menu</a>
-      <a href="./about.html">About Us</a>
-      <a href="./contact.html">Contact Us</a>
-      <a href="./booking.html">Book Table</a>
-     <!-- Search Icon -->
-    <div class="search-container">
-      <i class="fa fa-search"></i>
-    </div>
-  </nav>
-  </header>
-  <div id="searchBanner" class="search-banner">
-    <input type="text" placeholder="Search..." />
-    <button>Search</button>
-  </div>
-  
+        <a href="../index.html">Home</a>
+        <a href="./gallery.html">Our Gallery</a>
+        <a href="./menu.html">Our Menu</a>
+        <a href="./about.html">About Us</a>
+        <a href="./contact.html">Contact Us</a>
+        <a href="./booking.html">Book Table</a>
+
+        <!-- Search Icon -->
+        <div class="search-container" id="searchToggle">
+            <i class="fa fa-search"></i>
+        </div>
+    </nav>
+</header>
+
+
+
+<!-- SEARCH BANNER -->
+<div id="searchBanner" class="search-banner">
+    <input type="text" placeholder="Search menu...">
+</div>
+
+
+
 <main>
+
+  <!-- OUR MENUS -->
+  <section class="menu-section">
+      <h1 class="section-title">OUR MENUS</h1>
+
+      <div class="menu-grid">
+
+          <!-- BREAKFAST -->
+          <div class="menu-card">
+              <img src="../assets/BREAKFAST (7).jpg" alt="Breakfast">
+              <h2>BREAKFAST</h2>
+              <a href="./breakfast.html" class="menu-btn">View Breakfast Menu</a>
+          </div>
+
+          <!-- FOOD -->
+          <div class="menu-card">
+              <img src="../assets/food.jpg" alt="Food">
+              <h2>FOOD</h2>
+              <a href="./food.html" class="menu-btn">View Food Menu</a>
+          </div>
+
+          <!-- COCKTAILS -->
+          <div class="menu-card">
+              <img src="../assets/slushy.jpg" alt="Cocktails">
+              <h2>COCKTAILS</h2>
+              <a href="./cocktails.html" class="menu-btn">View Cocktail Menu</a>
+          </div>
+
+      </div>
+  </section>
+
+
+
+  <!-- QUICK LINKS -->
   <section class="quick-links">
     <h2>QUICK LINKS</h2>
     <div class="quick-links-grid">
@@ -51,46 +91,54 @@
       <a href="/pages/contact.html">Contact Us</a>
     </div>
   </section>
-  </main>
 
-  <footer>
+</main>
+
+
+
+<!-- FOOTER -->
+<footer>
     <div class="social-media-links">
-      <a href="https://www.facebook.com/share/1758TGBusH/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/mokgadi_mckay?igsh=MWhpM3poYm5rZXV4eg==" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.tiktok.com/@mokgadimolapo_?_t=ZS-8zAOnRZLRcD&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/share/1758TGBusH/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/mokgadi_mckay" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@mokgadimolapo_" target="_blank"><i class="fab fa-tiktok"></i></a>
     </div>
-    
-     <!-- Timestamp line -->
-         <p id="timestamp-message">Brewed fresh at: <span id="timestamp"></span></p>
-        <p>&copy; <span id="current-year"></span> Bliss Café. All Rights Reserved</p>
-  </footer>
 
-    <script>
-      // Hamburger
-      const hamburger = document.getElementById('hamburger');
-      const navbar = document.getElementById('navbar');
-      if (hamburger && navbar) {
-        hamburger.addEventListener('click', () => {
-          navbar.classList.toggle('show');
-          hamburger.classList.toggle('open');
-        });
-      }
 
-      // Optional: simple highlight on menu items when clicked
-      document.querySelectorAll('.menu-item p').forEach(p => {
-        p.addEventListener('click', () => {
-          p.classList.toggle('highlight');
-        });
-      });
-     
-        document.getElementById("searchToggle").addEventListener("click", function() {
-          const banner = document.getElementById("searchBanner");
-          banner.style.display = (banner.style.display === "flex") ? "none" : "flex";
-        });
-    
-      // Automatically set the current year in footer
-      document.getElementById("current-year").textContent = new Date().getFullYear();
-      
-    </script>
-  </body>
+    <p>&copy; <span id="current-year"></span> Bliss Café. All Rights Reserved.</p>
+</footer>
+
+
+
+<script>
+/* -----------------------------
+   HAMBURGER MENU
+--------------------------------*/
+const hamburger = document.getElementById("hamburger");
+const navbar = document.getElementById("navbar");
+
+hamburger.addEventListener("click", () => {
+    navbar.classList.toggle("show");
+    hamburger.classList.toggle("open");
+});
+
+
+/* 
+   SEARCH BANNER*/
+const searchToggle = document.getElementById("searchToggle");
+const searchBanner = document.getElementById("searchBanner");
+
+searchToggle.addEventListener("click", () => {
+    searchBanner.style.display =
+      searchBanner.style.display === "flex" ? "none" : "flex";
+});
+
+
+/* -----------------------------
+   FOOTER TIMESTAMPS
+--------------------------------*/
+document.getElementById("current-year").textContent = new Date().getFullYear();
+</script>
+
+</body>
 </html>
