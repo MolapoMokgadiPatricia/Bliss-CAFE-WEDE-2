@@ -475,6 +475,28 @@ header {
 .about-intro p:hover {
   color: #8c6d54;
 }
+/* Button */
+.about-intro .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 35px;
+  font-size: 1.1rem;
+
+  background: linear-gradient(135deg, #d4af37, #b8962e);
+  color: #1a1a1a;
+  border-radius: 50px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+/* Button Hover */
+.about-intro .btn:hover {
+  background: linear-gradient(135deg, #e6c45e, #d4af37);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.35);
+}
 
 /* Background pattern using ::before for subtle texture */
 .about-intro::before {
