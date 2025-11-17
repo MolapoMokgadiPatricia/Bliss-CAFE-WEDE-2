@@ -10,13 +10,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" />
 </head>
 <body>
-  <section>
-    <div class="social-media-links">
-      <a href="https://www.facebook.com/share/1758TGBusH/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/mokgadi_mckay" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.tiktok.com/@mokgadimolapo_" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-    </div>
-  </section>
   <header>
     <!--Navigation Section-->
     <img src="/assets/LOGO.png" alt="Bliss Cafe Logo" width="150" height="auto">
@@ -129,21 +122,28 @@
       <tr><td>Sunday:</td><td>Closed</td></tr>
     </table>
   </section>
-
-</div>
+<section class="quick-links">
+    <h2>QUICK LINKS</h2>
+    <div class="quick-links-grid">
+      <a href="/index.html">Home</a>
+      <a href="/pages/about.html">About Us</a>
+      <a href="/pages/menu.html">Our Menu</a>
+      <a href="/pages/gallery.html">Gallery</a>
+      <a href="/pages/bookings.html">Bookings</a>
+      <a href="/pages/contact.html">Contact Us</a>
+    </div>
+  </section>
 
   </main>
 
   <!-- Footer -->
   <footer>
-    <h3>Follow Us</h3>
     <div class="social-media-links">
       <a href="https://www.facebook.com/share/1758TGBusH/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
       <a href="https://www.instagram.com/mokgadi_mckay" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
       <a href="https://www.tiktok.com/@mokgadimolapo_" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
     </div>
     <!-- Timestamp line -->
-    <p id="timestamp-message">Brewed fresh at: <span id="timestamp"></span></p>
     <p>&copy; <span id="current-year"></span> Bliss Café. All Rights Reserved</p>
   </footer>
 
@@ -195,15 +195,6 @@
         contactForm.reset();
       });
     }
-
-    // Timestamp update
-    function updateTimestamp() {
-      const now = new Date();
-      document.getElementById("timestamp").textContent = now.toLocaleString();
-    }
-    setInterval(updateTimestamp, 1000);
-    updateTimestamp();
-
     // Automatically set the current year in footer
     document.getElementById("current-year").textContent = new Date().getFullYear();
   </script>

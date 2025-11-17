@@ -72,6 +72,17 @@
       <p id="formResponse" style="text-align:center; margin-top:10px;"></p>
       <p id="timestampMessage" style="text-align:center; margin-top:10px; font-style: italic;"></p>
     </section>
+     <section class="quick-links">
+    <h2>QUICK LINKS</h2>
+    <div class="quick-links-grid">
+      <a href="/index.html">Home</a>
+      <a href="/pages/about.html">About Us</a>
+      <a href="/pages/menu.html">Our Menu</a>
+      <a href="/pages/gallery.html">Gallery</a>
+      <a href="/pages/bookings.html">Bookings</a>
+      <a href="/pages/contact.html">Contact Us</a>
+    </div>
+  </section>
   </main>
 
   <footer>
@@ -81,8 +92,6 @@
       <a href="https://www.instagram.com/mokgadi_mckay" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://www.tiktok.com/@mokgadimolapo_" target="_blank"><i class="fab fa-tiktok"></i></a>
     </div>
-    <!-- Timestamp line -->
-    <p id="timestamp-message">Brewed fresh at: <span id="timestamp"></span></p>
     <p>&copy; <span id="current-year"></span> Bliss Café. All Rights Reserved</p>
   </footer>
 
@@ -142,13 +151,7 @@
 
         bookingForm.reset();
       });
-    }// Timestamp update
-      function updateTimestamp() {
-        const now = new Date();
-        document.getElementById("timestamp").textContent = now.toLocaleString();
-      }
-      setInterval(updateTimestamp, 1000);
-      updateTimestamp();
+    }
     // Automatically set the current year in footer
     document.getElementById("current-year").textContent = new Date().getFullYear();
   </script>
