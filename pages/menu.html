@@ -28,12 +28,17 @@
       <a href="./about.html">About Us</a>
       <a href="./contact.html">Contact Us</a>
       <a href="./booking.html">Book Table</a>
-      <a href="./dashboard.html">Dashboard</a>
-    </nav>
-  </header>
-
-
+     <!-- Search Icon -->
+    <div class="search-container">
+      <i class="fa fa-search"></i>
     </div>
+  </nav>
+  </header>
+  <div id="searchBanner" class="search-banner">
+    <input type="text" placeholder="Search..." />
+    <button>Search</button>
+  </div>
+  
 <main>
   <section class="quick-links">
     <h2>QUICK LINKS</h2>
@@ -77,13 +82,12 @@
           p.classList.toggle('highlight');
         });
       });
-      // Timestamp update
-      function updateTimestamp() {
-          const now = new Date();
-          document.getElementById("timestamp").textContent = now.toLocaleString();
-          }
-          setInterval(updateTimestamp, 1000);
-          updateTimestamp();
+     
+        document.getElementById("searchToggle").addEventListener("click", function() {
+          const banner = document.getElementById("searchBanner");
+          banner.style.display = (banner.style.display === "flex") ? "none" : "flex";
+        });
+    
       // Automatically set the current year in footer
       document.getElementById("current-year").textContent = new Date().getFullYear();
       
