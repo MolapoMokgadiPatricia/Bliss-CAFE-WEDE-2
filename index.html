@@ -16,7 +16,8 @@
 <body>
   <header>
     <!-- Logo on the Right -->
-    <img src="/assets/LOGO.png" alt="Bliss Cafe Logo" width="150" height="auto">
+    <div class="nav-container">
+    <img src="/assets/LOGO.png" alt="Bliss Cafe Logo" class="logo">
     <!--Hamburger icon-->
     <div class="hamburger" id="hamburger">
       <span></span>
@@ -37,23 +38,54 @@
   </header>
 
   <!-- Main Content Section -->
-  <main>
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="hero-content">
-        <h1>Welcome to Bliss Cafe</h1>
-        <p>Your cozy spot for the finest coffee & treats</p>
-        <a href="./pages/menu.html" class="btn">View Our Menu</a>
-      </div>
-    </section>
+  <main >
+      <!-- HERO SECTION -->
+    <section class="slideshow-container">
 
+            <!-- SLIDE 1 -->
+            <div class="mySlides fade">
+              <img src="/assets/SLIDE1.jpg" alt="Slide 1">
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="mySlides fade">
+              <img src="/assets/SLIDE2.jpg" alt="Slide 2">        
+            </div>
+            <!-- SLIDE 3 -->
+            <div class="mySlides fade">
+              <img src="/assets/SLIDE3.jpg" alt="Slide 3">
+            </div>
+
+            <!-- ARROWS -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </section>
+
+          <!-- DOTS -->
+          <div class="dots-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+  <!--Menu banner -->
+    <section class="menu-banner">
+    <div class="menu-banner-overlay"></div>
+
+    <div class="menu-banner-content">
+        <h2>Our Menu</h2>
+        <p>Whether you’re here for a quick bite, a cocktail, or the full experience, 
+          our menu is designed to keep the energy high & 
+          the flavours memorable. Eat, sip & stay a while.</p>
+        <a href="./pages/menu.html" class="menu-banner-btn">View Menu</a>
+    </div>
+   </section>
     <!--Promo banner-->
     <section class="promo-banner">
       <div class="content">
-        <h1>Exclusive Coffee Deal!</h1>
+        <h1>Exclusive Deal!</h1>
         <p>Use the promo code below for 20% off, FOR FIRST TIME CUSTOMERS:</p>
         <div class="promo-code">
-          <span>COFFEEBREAK20</span>
+          <span>BLISSCAFEEE20</span>
         </div>
       </div>
     </section>
@@ -83,18 +115,38 @@
         </blockquote>
       </div>
     </section>
-    
+    <div class="info-row">
+  <!-- Contact Details -->
+  <section class="contact-details box">
+    <h1>Our Details</h1>
+    <table>
+      <tr><td>Cell-Phone:</td><td>(071)-088-4565</td></tr>
+      <tr><td>Address:</td><td>54 Kerk St, Polokwane, 0700</td></tr>
+      <tr><td>Email:</td><td><a href="mailto:blisscafe@gmail.com">blisscafe@gmail.com</a></td></tr>
+    </table>
+  </section>
+
+  <!-- Business Hours -->
+  <section class="business-hours box">
+    <h1>Business Hours</h1>
+    <table>
+      <tr><td>Mon–Fri:</td><td>8:00 AM – 5:00 PM</td></tr>
+      <tr><td>Saturday:</td><td>9:00 AM – 3:00 PM</td></tr>
+      <tr><td>Sunday:</td><td>Closed</td></tr>
+    </table>
+  </section>
     <section class="quick-links">
     <h2>QUICK LINKS</h2>
     <div class="quick-links-grid">
-      <a href="/index.html">Home</a>
-      <a href="/pages/about.html">About Us</a>
-      <a href="/pages/menu.html">Our Menu</a>
-      <a href="/pages/gallery.html">Gallery</a>
-      <a href="/pages/bookings.html">Bookings</a>
-      <a href="/pages/contact.html">Contact Us</a>
+      <a href="../index.html">Home</a>
+      <a href="./gallery.html">Our Gallery</a>
+      <a href="./menu.html">Our Menu</a>
+      <a href="./about.html">About Us</a>
+      <a href="./contact.html">Contact Us</a>
+      <a href="./booking.html">Book Table</a>
     </div>
   </section>
+</div>
   </main>
 
   <!-- Footer Section -->
@@ -132,11 +184,47 @@
             if (rect.top < window.innerHeight - 100) sec.classList.add('visible');
           });
         });
-      
+                  let slideIndex = 1;
+          showSlides(slideIndex);
+
+          // Next/previous controls
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+
+          // Thumbnail image controls
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+
+          function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+
+            for (i = 0; i < dots.length; i++) {
+              dots[i].classList.remove("active-dot");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].classList.add("active-dot");
+          }
+
+          // Auto slide every 5 seconds
+          setInterval(() => {
+            plusSlides(1);
+          }, 5000);
+
             // Automatically set the current year in footer
             document.getElementById("current-year").textContent = new Date().getFullYear();
-
+          
         </script>
 </body>
-
 </html>
