@@ -139,7 +139,9 @@ Student Number: ST10487723
 /assets/LaptopRespond - Copy.png
 
 <Responsiveness Evidence (2025-11-19)>
-
+/assets/mobile.png
+/assets/tablet.png
+/assets/laptop.png
 
 <References>
 W3Schools. (2025, September 22). W3Schools. Retrieved from W3Schools: https://www.w3schools.com/cssref/index.php

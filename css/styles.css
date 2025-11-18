@@ -1027,7 +1027,7 @@ h1, h2 {
 
 /* Images inside slideshow */
 .menu-images img {
-  width: 90%;
+  width: 70%;
   display: none;
   border-radius: 10px;
   cursor: pointer;
@@ -1040,8 +1040,8 @@ h1, h2 {
 /* Arrows */
 .menu-prev,
 .menu-next {
-  cursor: pointer;
-  position: absolute;
+ 
+  position:absolute;
   top: 50%;
   padding: 12px;
   color: white;
