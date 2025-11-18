@@ -1097,7 +1097,7 @@ h1, h2 {
 .box td {
   font-size: 15px;
   padding: 6px 0;
-  color: #e6e6e6 !important; /* lighter grey like screenshot */
+  color: #e6e6e6 !important; 
 }
 
 .box a {

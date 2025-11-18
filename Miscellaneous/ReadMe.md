@@ -97,7 +97,9 @@ Student Number: ST10487723
 
     Added responsive CSS styling
     
-    Added Java script in every page 
+    Added Java script in every page. 
+
+
 
 <Latest Update (2025-11-19)>
 
@@ -115,7 +117,9 @@ Student Number: ST10487723
 
     Added a new page for table reservation.{booking.html}
 
-    
+    Changed the menu 
+
+    Added the light box feature 
     
 
 <Improvents from feedback (2025-11-19)>
@@ -135,14 +139,13 @@ Student Number: ST10487723
 /assets/LaptopRespond - Copy.png
 
 <Responsiveness Evidence (2025-11-19)>
-/assets/Mobile 2.0.png
-/assets/Tablet 2.0.png
-/assets/Laptop 2.0.png
+
 
 <References>
 W3Schools. (2025, September 22). W3Schools. Retrieved from W3Schools: https://www.w3schools.com/cssref/index.php
 W3Schools. (2025, September 22). W3Schools. Retrieved from W3Schools: https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
 W3Schools. (2025, September 22). W3Schools. Retrieved from W3Schools: https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+W3Schools. (2025, November 19). W3Schools. Retrieved from W3Schools:  https://www.w3schools.com/js/default.asp
 Rosebank College. (2025, September 25).Rosebank College. Retrieved from WEDE5020 2025, Class Content, Class Demo.
 Molapo MP. (2025, September 25)
 
