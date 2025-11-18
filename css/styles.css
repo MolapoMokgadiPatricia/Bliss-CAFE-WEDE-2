@@ -1036,10 +1036,11 @@ h1, h2 {
 
 /* Images inside slideshow */
 .menu-images img {
-  width: 100%;
+  width: 70%;
   display: none;
   border-radius: 10px;
   cursor: pointer;
+  margin: 0 auto;
 }
 
 .menu-images img.active {
@@ -1050,18 +1051,35 @@ h1, h2 {
 .menu-prev,
 .menu-next {
   cursor: pointer;
-  position:absolute;
+  position: absolute;
   top: 50%;
-  padding: 12px;
+  padding: 14px 18px;
   color: white;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: bold;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
   user-select: none;
   transform: translateY(-50%);
+  transition: 0.3s;
 }
 
-.menu-prev { left: 10px; }
-.menu-next { right: 10px; }
+/* Left Arrow */
+.menu-prev {
+  left: 15%;
+}
+
+/* Right Arrow */
+.menu-next {
+  right: 15%;
+}
+
+/* Hover Effect */
+.menu-prev:hover,
+.menu-next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
 
 /* Lightbox */
 .lightbox {
